@@ -60,16 +60,14 @@ class Board extends Component {
         let status;
 
         if(winner){
-            status = 'Winner is ='+ winner;
+            status = 'The winner is = '+ winner;
         }else{
-            status = 'Next Player ='+ (this.state.xIsNext ? 'X' : 'O');
+            status = 'Next Player = '+ (this.state.xIsNext ? 'X' : 'O');
         }
         return (
 
             <div>
-                <div className="status">
-                    {status}
-                </div>
+
                 <div className="board-row">
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
@@ -84,6 +82,9 @@ class Board extends Component {
                     {this.renderSquare(6)}
                     {this.renderSquare(7)}
                     {this.renderSquare(8)}
+                </div>
+                <div className="status">
+                    {status}
                 </div>
             </div>
 
