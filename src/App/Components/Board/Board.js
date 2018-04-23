@@ -15,7 +15,7 @@ class Board extends Component {
     handleClick(i){
         const squares = this.state.squares.slice();
 
-        if(this.calculateWinner(squares)){
+        if(this.calculateWinner(squares) || squares[i]){
             return;
         }
 
